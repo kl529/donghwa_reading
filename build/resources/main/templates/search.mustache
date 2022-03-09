@@ -1,0 +1,27 @@
+{{>layout/header}}
+<a href="/homepage" height="5" width="10">
+    <img src="https://github.com/DongHwaTeam/donghwaproject/blob/main/logo_image.png?raw=true" width="100" style="float: right;" title="LIVERARY" alt="위의 이미지를 누르면 연결됩니다.">
+    <a>
+<h2>검색어 결과 list </h2>
+<table class = "table table-horizontal table-bordered">
+    <thead class = "thead-strong">
+    <tr>
+        <th> 책이름 </th>
+        <th> 책 이미지 </th>
+        <th> 저자명 </th>
+        <th> 출판사 </th>
+    </tr>
+    </thead>
+    <tbody id = "tbody">
+    {{#books}}
+        <tr>
+            <td>{{title}}</td>
+            <td><a href = "/api/v1/books/info/{{bookKey}}">{{title}}</a>
+            <td>{{author}}</td>
+            <td>{{publisher}}</td>
+
+        </tr>
+    {{/books}}
+    </tbody>
+</table>
+{{>layout/footer}}

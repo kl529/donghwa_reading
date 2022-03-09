@@ -1,0 +1,66 @@
+{{>layout/header}}
+<a href="/homepage" height="5" width="10">
+    <img src="https://github.com/DongHwaTeam/donghwaproject/blob/main/logo_image.png?raw=true" width="100" style="float: right;" title="LIVERARY" alt="위의 이미지를 누르면 연결됩니다.">
+    <a>
+<h1>새로운 책 등록 하기</h1>
+
+<div class = "col-md-12">
+    <div class="col-md-4">
+        <form enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="title">title</label>
+                <input type="text" class="form-control"
+                       id = "title" placeholder="제목을 입력하세요">
+            </div>
+            <div class="form-group">
+                <label for="author">author</label>
+                <input type="text" class="form-control"
+                       id = "author" placeholder="저자를 입력하세요">
+            </div>
+            <div class="form-group">
+                <label for="publisher">publisher</label>
+                <input type="text" class="form-control"
+                       id = "publisher" placeholder="출판사를 입력하세요">
+            </div>
+            <div class="form-group">
+                <label for="country">country</label>
+                <input type="text" class="form-control"
+                       id = "country" placeholder="나라를 입력하세요">
+            </div>
+            <div class="form-group">
+                <label for="bookIntro">bookIntro</label>
+                <input type="text" class="form-control"
+                       id = "bookIntro" placeholder="책 소개를 입력하세요">
+            </div>
+            <div class="form-group">
+                <label for="bookCover">bookCover</label>
+                <input type="text" class="form-control"
+                       id = "bookCover" placeholder="책 표지를 입력하세요">
+            </div>
+            <div class = "form-group">
+                <form action="/mung/fileinsert" method="post" enctype="multipart/form-data">
+                    <input type="file" name="files">
+                    <button type="submit" class="btn btn-dark">업로드</button>
+                </form>
+            </div>
+
+
+            <div class="form-group">
+                <label for="totalPage">totalPage</label>
+                <input type="number" class="form-control"
+                       id = "totalPage" placeholder="책의 페이지수를 입력하세요">
+            </div>
+            <div class="form-group">
+                <label for="publishedDate">publishedDate</label>
+                <input type="date" class="form-control"
+                       id = "publishedDate">
+            </div>
+        </form>
+
+        <a role="button" class="btn btn-primary" id="btn-save">등록</a>
+        <a href="/homepage" role="button" class="btn btn-secondary" >취소</a>
+
+    </div>
+</div>
+
+{{>layout/footer}}

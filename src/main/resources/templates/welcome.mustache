@@ -1,0 +1,26 @@
+{{! welcome }}
+
+{{>layout/header}}
+<h1> 동화팀 liverary 웰컴 페이지 </h1>
+서비스 로고, 소셜 로그인 버튼 필요, 로그인 성공시 home으로 이동
+
+<div class = "col-md-12">
+    <!-- 로그인 기능 영역 -->
+    <div class="row">
+        <div class="col-md-6">
+            {{#userName}}
+                <span id="user">{{userName}}</span>님 안녕하세요
+                <a href="/logout" class="btn btn-info active" role="button">Logout</a>
+                <a href="/homepage" class="btn btn-info active">홈페이지</a>
+            {{/userName}}
+            {{^userName}}
+                <a href="/oauth2/authorization/google"
+                   class="btn btn-success active"
+                   role="button"> Google Login </a>
+            {{/userName}}
+
+        </div>
+    </div>
+    <!-- 로그인 기능 영역 -->
+</div>
+{{>layout/footer}}
